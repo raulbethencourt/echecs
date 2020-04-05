@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+h2 {
+    text-align: center;
+}
+
+#wrapper {
+    text-align: center;
+}
+
+.blanc {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+    text-align: center;
+    padding-top: 4%;
+}
+
+.noir {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: 1px solid rgb(0, 0, 0);
+    text-align: center;
+    padding-top: 4%;
+}
+
+
+.column {
+    display: flex;
+    justify-content: center;
+}
+
+#table {
+    display: inline-block;
+}
+
+.row {
+    display: flex;
+}
