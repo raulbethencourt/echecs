@@ -2,6 +2,7 @@
 
 function setTable()
 {
+    // Function to set the table for each player
     function setJoueur($nb, $color)
     {
         $pieces = [
@@ -13,13 +14,15 @@ function setTable()
         $row = '<div class="row">';
         $div = '</div>';
 
+        // Condition to change king and Queen position
         if ($color === 'NOIR') {
             $pieces[3] = 'roi';
             $pieces[4] = 'reine';
         }
 
+        /* Condition to set player 1 
+        We set with each for loop the row that starts in white and in black */ 
         if ($nb == 1) {
-
             echo  $row;
             for ($i = 0; $i < 8; $i++) {
                 if ($i % 2 == 1) {
@@ -39,8 +42,10 @@ function setTable()
                 }
             }
             echo $div;
+        
+        /* Condition to set player 
+        We use same way but we do countdown */
         } else {
-
             echo  $row;
             for ($i = 15; $i > 7; $i--) {
                 if ($i % 2 == 1) {
@@ -63,6 +68,7 @@ function setTable()
         }
     }
 
+    // Function to set space between players
     function setRest()
     {
         $noir = '<div class="noir"></div>';
@@ -70,8 +76,8 @@ function setTable()
         $row = '<div class="row">';
         $div = '</div>';
 
+        // same logic but we dont call the figures 
         for ($a = 0; $a < 2; $a++) {
-
             echo $row;
             for ($i = 0; $i < 8; $i++) {
                 if ($i % 2 == 1) {
@@ -94,6 +100,7 @@ function setTable()
         }
     }
 
+    // We call the functions 
     setJoueur(1, 'NOIR');
     setRest();
     setJoueur(2, 'BLANC');
@@ -113,6 +120,7 @@ function setTable()
 <body>
     <div id="wrapper">
         <h2>PLAYER 1</h2>
+        <!-- We call setTable function -->
         <div id="table"><?= setTable() ?></div>
         <h2>PLAYER 2</h2>
     </div>
