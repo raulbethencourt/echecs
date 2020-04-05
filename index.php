@@ -1,5 +1,6 @@
 <?php
 
+// Function that creats our chess table
 function setTable()
 {
     // Function to set the table for each player
