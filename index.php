@@ -8,7 +8,6 @@ function setTable()
             "tour", "cavalier", "fou", "reine", "roi", "fou", "cavalier", "tour", "pion", "pion", "pion",
             "pion", "pion", "pion", "pion", "pion"
         ];
-
         $noir = '<div class="noir">';
         $blanc = '<div class="blanc">';
         $row = '<div class="row">';
@@ -20,6 +19,7 @@ function setTable()
         }
 
         if ($nb == 1) {
+
             echo  $row;
             for ($i = 0; $i < 8; $i++) {
                 if ($i % 2 == 1) {
@@ -40,6 +40,7 @@ function setTable()
             }
             echo $div;
         } else {
+
             echo  $row;
             for ($i = 15; $i > 7; $i--) {
                 if ($i % 2 == 1) {
@@ -70,6 +71,7 @@ function setTable()
         $div = '</div>';
 
         for ($a = 0; $a < 2; $a++) {
+
             echo $row;
             for ($i = 0; $i < 8; $i++) {
                 if ($i % 2 == 1) {
@@ -114,7 +116,6 @@ function setTable()
         <div id="table"><?= setTable() ?></div>
         <h2>PLAYER 2</h2>
     </div>
-
 </body>
 
 </html>
